@@ -1,8 +1,8 @@
 #include "libft.h"
 
-int ft_isalnum (char c)
+int ft_isalnum(int c)
 {
-    if((c >= 48 && c <= 57) || (c >= 64 && c <= 90) || (c >= 97 && c <= 122))
+    if((c >= '0' && c <= '9') || (c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
     {
        return (1);
     }
