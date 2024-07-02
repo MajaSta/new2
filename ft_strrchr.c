@@ -4,22 +4,25 @@ char *ft_strrchr(const char *s, int c)
 {
     const char *last = NULL;
 
-    while (*s)
+    if (s != NULL)
     {
-        if (*s == (char)c)
+        while (*s)
         {
-            last = s;
+            if (*s == (char)c)
+            {
+                last = s;
+            }
+            s++;
         }
-        s++;
-    }
-
-    if (c == '\0')
-    {
-        return (char *)s;
+        if ((char)c == '\0')
+        {
+            return (char *)s;  // Zwraca wskaźnik na koniec łańcucha
+        }
     }
 
     return (char *)last;
 }
+
 /*
 #include <stdio.h>
 int main()
