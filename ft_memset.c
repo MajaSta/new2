@@ -2,12 +2,22 @@
 
 void *ft_memset(void *s, int c, size_t n)
 {
-    size_t i;
+    unsigned char *ptr;
+    unsigned char value;
 
-    unsigned char *ptr = (unsigned char *)s;
-    for (i = 0; i < n; i++)
+    if (n > 0) 
     {
-        ptr[i] = (unsigned char)c;
+        ptr = (unsigned char *)s;
+        value = (unsigned char)c;
+        *ptr = value;
+        
+        size_t i = 1;
+        while (i < n)
+        {
+            ptr[i] = value;
+            i++;
+        }
     }
+    
     return s;
 }
